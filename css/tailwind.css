@@ -1790,32 +1790,53 @@ select {
   transition-timing-function: linear;
 }
 
-.text-main-500{
+/* 修改文本颜色为紫色 */
+
+.text-main-500 {
   --tw-text-opacity: 1;
-  color: rgba(11, 166, 101, var(--tw-text-opacity))
+  color: rgba(128, 0, 128, var(--tw-text-opacity));
+  /* 紫色 */
 }
 
-.dark{
+/* 修改暗模式背景颜色为深紫色 */
+
+.dark {
   --tw-bg-opacity: 1;
   background-color: rgb(17 20 24 / var(--tw-bg-opacity));
 }
 
+/* 修改侧边栏激活状态的背景和文本颜色，并添加渐变效果 */
+
 .sidebar-active {
-  --tw-bg-opacity: 0.2;
-  /* background-color: rgba(243, 244, 246, var(--tw-bg-opacity)); bg-gray-100 */
-  background-color: rgba(156, 163, 175, var(--tw-bg-opacity));
-  /* bg-gray-400 */
+  --tw-bg-opacity: 0.8;
+  background: linear-gradient(
+    135deg,
+    rgba(128, 0, 128, var(--tw-bg-opacity)),
+    rgba(75, 0, 130, var(--tw-bg-opacity))
+  );
+  /* 紫色渐变 */
   --tw-text-opacity: 1;
-  color: rgba(11, 166, 101, var(--tw-text-opacity))
-  /* text-indigo-500 */
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+  /* 白色 */
+  transition: background 0.3s ease, color 0.3s ease;
+  /* 添加渐变效果 */
 }
 
-.sidebar-active-dark {
-  /* --tw-bg-opacity: 1; */
-  /* background-color: rgb(31 41 55 / var(--tw-bg-opacity)); bg-gray-800 */
-  /* --tw-text-opacity: 1; */
-  /* color: rgba(255, 255, 255, var(--tw-text-opacity)) text-white */
+/* 添加悬停效果 */
+
+.sidebar-active:hover {
+  --tw-bg-opacity: 1;
+  background: linear-gradient(
+    135deg,
+    rgba(75, 0, 130, var(--tw-bg-opacity)),
+    rgba(138, 43, 226, var(--tw-bg-opacity))
+  );
+  /* 深紫色渐变 */
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+  /* 白色 */
 }
+
+/* 隐藏滚动条 */
 
 .no-scrollbar::-webkit-scrollbar {
   display: none;
@@ -1828,13 +1849,19 @@ select {
   /* Firefox */
 }
 
+/* 修改文件夹颜色变量 */
+
 :root {
-  --folderColor: #3CB884;
+  --folderColor: rgba(138, 43, 226, var(--tw-bg-opacity));
+  /* 紫色 */
   --paperColor: #ffffff;
 }
 
+/* 修改文件夹卡片的过渡效果 */
+
 .folder-card {
-  transition: all 0.2s ease-in;
+  transition: all 0.3s ease-in-out;
+  /* 修改过渡时间和效果 */
 }
 
 .folder__svg {
@@ -1842,11 +1869,16 @@ select {
   height: 80px;
 }
 
+/* 修改文件夹背景颜色 */
+
 .folder__back {
-  fill: #0BA665;
+  fill: #800080;
+  /* 紫色 */
   rx: 10;
   ry: 10;
 }
+
+/* 修改纸张颜色和过渡效果 */
 
 .paper-1 {
   fill: #e6e6e6;
@@ -1878,6 +1910,8 @@ select {
   fill: #ffffff;
 }
 
+/* 修改文件夹前景颜色和过渡效果 */
+
 .folder__front {
   fill: var(--folderColor);
   rx: 10;
@@ -1886,17 +1920,20 @@ select {
   transition: all 0.3s ease-in-out;
 }
 
+/* 修改文件夹卡片悬停效果 */
+
 .folder-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px);
+  /* 增加悬停时的移动距离 */
 }
 
 .folder-card:hover .paper-1 {
-  y: 12;
+  y: 15;
   transform: translateY(0%);
 }
 
 .folder-card:hover .paper-2 {
-  y: 22;
+  y: 25;
   transform: translateY(0%);
 }
 
@@ -1904,7 +1941,7 @@ select {
   rx: 13;
   ry: 13;
   y: 10;
-  height:80;
+  height: 80;
   transform: skewY(0deg) scaleY(0.6);
 }
 
@@ -1912,13 +1949,15 @@ select {
   rx: 13;
   ry: 13;
   y: 0;
-  height:80;
+  height: 80;
   transform: skewY(0deg) scaleY(0.6);
 }
 
+/* 修改加载器颜色和动画效果 */
+
 .loader {
-  border-top-color: #0BA665;
-  /* You can change this color as needed */
+  border-top-color: #800080;
+  /* 紫色 */
   animation: spin 1s linear infinite;
 }
 
@@ -1932,88 +1971,115 @@ select {
   }
 }
 
-.card-icon-bg{
-  background-color: rgb(129 132 138 / 10%);
+/* 修改卡片图标背景颜色 */
+
+.card-icon-bg {
+  background-color: rgb(128 0 128 / 10%);
+  /* 紫色 */
 }
+
+/* 修改暗模式下不同灰度背景颜色 */
 
 .dark\:pintree-bg-gray-900:is(.dark *) {
   --tw-bg-opacity: 1;
-  background-color: rgb(17 20 24 / var(--tw-bg-opacity));
+  background-color: rgb(48 25 52 / var(--tw-bg-opacity));
+  /* 深紫色 */
 }
 
 .dark\:pintree-bg-gray-800:is(.dark *) {
   --tw-bg-opacity: 1;
-  background-color: rgb(34 37 42 / var(--tw-bg-opacity));
+  background-color: rgb(75 0 130 / var(--tw-bg-opacity));
+  /* 靛蓝色 */
 }
 
 .dark\:pintree-bg-gray-700:is(.dark *) {
   --tw-bg-opacity: 1;
-  background-color: rgb(39 42 48 / var(--tw-bg-opacity));
+  background-color: rgb(138 43 226 / var(--tw-bg-opacity));
+  /* 蓝紫色 */
 }
 
 .dark\:pintree-bg-gray-600:is(.dark *) {
   --tw-bg-opacity: 1;
-  background-color: rgb(45 49 57 / var(--tw-bg-opacity));
+  background-color: rgb(153 50 204 / var(--tw-bg-opacity));
+  /* 深紫色 */
 }
+
+/* 修改暗模式下不同灰度背景颜色的悬停状态 */
 
 .dark\:hover\:pintree-bg-gray-900:hover:is(.dark *) {
   --tw-bg-opacity: 1;
-  background-color: rgb(17 20 24 / var(--tw-bg-opacity));
+  background-color: rgb(48 25 52 / var(--tw-bg-opacity));
+  /* 深紫色 */
 }
 
 .dark\:hover\:pintree-bg-gray-800:hover:is(.dark *) {
   --tw-bg-opacity: 1;
-  background-color: rgb(34 37 42 / var(--tw-bg-opacity));
+  background-color: rgb(75 0 130 / var(--tw-bg-opacity));
+  /* 靛蓝色 */
 }
 
 .dark\:hover\:pintree-bg-gray-700:hover:is(.dark *) {
   --tw-bg-opacity: 1;
-  background-color: rgb(39 42 48 / var(--tw-bg-opacity));
+  background-color: rgb(138 43 226 / var(--tw-bg-opacity));
+  /* 蓝紫色 */
 }
 
 .dark\:hover\:pintree-bg-gray-600:hover:is(.dark *) {
   --tw-bg-opacity: 1;
-  background-color: rgb(45 49 57 / var(--tw-bg-opacity));
+  background-color: rgb(153 50 204 / var(--tw-bg-opacity));
+  /* 深紫色 */
 }
+
+/* 修改暗模式下不同灰度边框颜色 */
 
 .dark\:pintree-border-gray-900:is(.dark *) {
   --tw-bg-opacity: 1;
-  border-color: rgb(17 20 24 / var(--tw-bg-opacity));
+  border-color: rgb(48 25 52 / var(--tw-bg-opacity));
+  /* 深紫色 */
 }
 
 .dark\:pintree-border-gray-800:is(.dark *) {
   --tw-bg-opacity: 1;
-  border-color: rgb(34 37 42 / var(--tw-bg-opacity));
+  border-color: rgb(75 0 130 / var(--tw-bg-opacity));
+  /* 靛蓝色 */
 }
 
 .dark\:pintree-border-gray-700:is(.dark *) {
   --tw-bg-opacity: 1;
-  border-color: rgb(39 42 48 / var(--tw-bg-opacity));
+  border-color: rgb(138 43 226 / var(--tw-bg-opacity));
+  /* 蓝紫色 */
 }
 
 .dark\:pintree-border-gray-600:is(.dark *) {
   --tw-bg-opacity: 1;
-  border-color: rgb(45 49 57 / var(--tw-bg-opacity));
+  border-color: rgb(153 50 204 / var(--tw-bg-opacity));
+  /* 深紫色 */
 }
+
+/* 修改暗模式下不同灰度环颜色 */
 
 .dark\:pintree-ring-gray-900:is(.dark *) {
   --tw-bg-opacity: 1;
-  --tw-ring-color: rgb(17 20 24 / var(--tw-bg-opacity));
+  --tw-ring-color: rgb(48 25 52 / var(--tw-bg-opacity));
+  /* 深紫色 */
 }
 
 .dark\:pintree-ring-gray-800:is(.dark *) {
   --tw-bg-opacity: 1;
-  --tw-ring-color: rgb(34 37 42 / var(--tw-bg-opacity));
+  --tw-ring-color: rgb(75 0 130 / var(--tw-bg-opacity));
+  /* 靛蓝色 */
 }
 
 .dark\:pintree-ring-gray-700:is(.dark *) {
   --tw-bg-opacity: 1;
-  --tw-ring-color: rgb(39 42 48 / var(--tw-bg-opacity));
+  --tw-ring-color: rgb(138 43 226 / var(--tw-bg-opacity));
+  /* 蓝紫色 */
 }
 
 .dark\:pintree-ring-gray-600:is(.dark *) {
   --tw-bg-opacity: 1;
-  --tw-ring-color: rgb(45 49 57 / var(--tw-bg-opacity));
+  --tw-ring-color: rgb(153 50 204 / var(--tw-bg-opacity));
+  /* 深紫色 */
 }
 
 .hover\:bg-gray-100:hover {
@@ -2270,10 +2336,6 @@ select {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .md\:items-center {
-    align-items: center;
-  }
-
   .md\:justify-between {
     justify-content: space-between;
   }
@@ -2382,4 +2444,3 @@ select {
     stroke: #14b8a6;
   }
 }
-

@@ -7,7 +7,7 @@
     "build:css": "tailwindcss build ./css/styles.css -o ./css/tailwind.css",
     "watch:css": "nodemon -e html,css,js -x \"npm run build:css\"",
     "dev": "concurrently \"npm run watch:css\"",
-    "deploy": "npm run build:css && echo '' > ./.nojekyll && node ./node_modules/gh-pages/bin/gh-pages-clean.js && gh-pages -d ./ -t -x node_modules && echo 'https://aiyoudiao.github.io/bookmark-tree'"
+    "deploy": "npm run build:css && echo '' > ./.nojekyll && node ./node_modules/gh-pages/bin/gh-pages-clean.js && gh-pages -d ./ -x node_modules && echo 'https://aiyoudiao.github.io/bookmark-tree'"
   },
   "keywords": [],
   "author": "",

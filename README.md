@@ -1,7 +1,7 @@
 # bookmark-tree
 
 
-## 操作说明
+插件：https://chromewebstore.google.com/detail/pintree-bookmarks-exporte/mjcglnkikjidokobpfdcdmcnfdicojce
 
-https://pintree.io/guide-zh.html
+操作说明：https://pintree.io/guide-zh.html
 
